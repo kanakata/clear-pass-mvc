@@ -1,4 +1,4 @@
-<script src="./js/file.js" type="text/javascript"></script>
+<!-- include your utility footer -->
+<?php loadPopup() ?>
 </body>
-
 </html>
