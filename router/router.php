@@ -5,11 +5,24 @@ namespace Router;
 class Router
 {
     //set your landing page
-    private static ?string $landingPage = "/welcome";
+    private static ?string $landingPage = "/landing";
     private static array $allowedPages = [
         //set the pages that users are allowed to view.
         "/",
-        "/welcome"
+        "/403",
+        "/404",
+        "/farmer",
+        "/hotel",
+        "/index",
+        "/landing",
+        "/messages",
+        "/orderDetail",
+        "/orders",
+        "/productForm",
+        "/products",
+        "/profile",
+        "/register",
+        "/show",
     ];
 
     public static function router(string $path)
@@ -29,7 +42,7 @@ class Router
         $fullClass = "App\Controllers\\" . $controllerName;
 
         if (class_exists($fullClass)) {
-            
+
             $controller = new $fullClass();
 
             //inside your controllers create a show function or index.
